@@ -1,0 +1,62 @@
+- Comandos -
+
+- git push origin main
+ Navegando por diferentes commits
+ No caso de um commit, você irá acessá-lo através de seu hash:
+
+-git checkout hashou
+ Volta ao estado anterior do codigo antes de ser alterado.
+
+- git reset --hard hashDoCommit
+ reseta tudo que alterei pra frente 
+
+- git remote rm origin
+ para remover o endereço remoto.
+
+- git config --list 
+ para listar todas as configurações que conseguir encontrar naquele momento:
+
+- git branches
+ para listar as branches.
+
+- git branch --list
+ Para saber a lista de branches que existem no seu repositório.
+
+- git branch -a
+ Para listar também os branches remotos
+
+- git branch -d nome-da-branch
+ Para remover uma branch (ramo) local no Git
+
+Caso você receba o seguinte erro:
+
+error: The branch 'teste' is not fully merged.
+
+Isso significa que você possui algum commit recente nesta branch, e excluí-la significaria perder este commit.
+
+Caso queira salvar algum commit, faça um merge com outra branch. Caso contrário, faça um force delete com o
+ parâmetro -D maiúsculo. Cuidado para não perder nada importante.
+
+- git branch -D nome-da-branch
+ Nos comandos acima, -d é um alias para --delete e -D é um alias para --delete --force. 
+
+-  git checkout -b vidro
+ Cria uma branch
+
+- rm -r *
+deleta os arquivos
+
+git init --initial-branch=main
+git remote add origin
+git status
+git log : mostra o historico do que esta acontecendo
+git add
+git reset HEAD index.html
+git add * todos
+git commit -m " "
+git show HEAD
+git show
+git revert : reverte o que foi feito pra um momento anterior 
+git clone
+git diff mostra o que foi alterado
+

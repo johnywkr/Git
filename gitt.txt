@@ -1,0 +1,81 @@
+Passos pra enviar uma pasta para o git
+ 1° Passo:
+
+Esses dois comandos só serão usados uma vez !
+
+ - git config --global user.name "Fulano de Tal"
+ - git config --global user.email fulanodetal@exemplo.pt
+
+
+ - cd C:
+   cd endereço de destino
+
+ - git init
+
+O comando git init cria um novo repositório do Git. Ele pode ser usado para converter um projeto existente e não versionado em um repositório do Git
+ou inicializar um novo repositório vazio
+
+ - git remote add origin
+para adicionar um origin para o repositório se não existe nenhum.
+
+ - git status
+Verificar estado dos arquivos/diretórios
+
+ - git add .
+add: prepara os arquivos para serem sincronizados. Nesse caso, como passamos um ponto como argumento, ele adicionará todos os arquivos criados ou modificados.
+
+ - git commit -m "Criando primeiros arquivos do projeto"
+commit: cria uma operação de envio, ou seja, pega todos os arquivos que foram adicionados e os agrupa para serem enviados. Com o argumento -m informamos uma mensagem 
+que identifica esse commit. É importante que essa mensagem seja clara para que seja fácil identificar o que foi feito naqueles arquivos que estão sendo enviados.
+
+ - git push origin master
+push: essa é a operação de sincronização propriamente dita. Ela pegará o último commit e o enviará para o repositório.
+
+
+ Pronto 1º passo terminado ..
+
+Alterei um arquivo o que eu faço ?
+   
+ - git add  -> para adicionar o arquivo alterado para ser commitado.
+	necessita ter um arquivo alterado.
+
+ - git commit - > salva algo , no caso o que foi alterado.
+	necessita ter arquivos salvos no git add
+
+ - git push -> sobe o arquivo que foi commitado 
+	necessita ter commit para subir 
+ 
+ 2º passo:
+
+ Fiz alterações no codigo , mas quero o codigo antes de ter sido alterado .
+  Como faço ?
+
+ - git checkout hashdocommit - > que seria o id de identificação antes de alterado ,
+ serve como um chave pra voltar no tempo.
+
+ Se quiser apagar tudo que foi feito no codigo
+
+ - git rest --hard hashDoCommit -> vai apagar tudo.
+
+ 3º Passo
+ Caso eu queira clonar um repositorio
+
+ - git clone linkDoRepositorio -> precisa direcionar a pasta antes .
+ Tambem serve pra se tiver apagado a pasta do pc , ai é so clonar o arquivo. 
+
+
+ - Apagando arquivos da Branch
+   rm -r , para excluir os arquivos.
+   git status pra verificar a exclução
+   git add para adicionar a exclução há uma nova branch
+   git commit
+   git push , pronto feito!
+
+ 4° tendando da um push, mais da um erro !!!
+
+Você está tentando subir alterações para um git remoto, porém no servidor remoto existem alterações mais novas que a suas,
+ que você ainda não tem no seu local. Portanto, antes de fazer o push, você precisa puxar/pull as alterações de lá:
+
+  - git checkout <sua-branch> && git pull origin <sua-branch>
+ Dessa forma, seu repositório local será atualizado com as alterações do remoto.
+
