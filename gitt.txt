@@ -6,6 +6,7 @@ Esses dois comandos só serão usados uma vez !
  - git config --global user.name "Fulano de Tal"
  - git config --global user.email fulanodetal@exemplo.pt
 
+    -> O Git vem com uma ferramenta chamada git config que permite ver e atribuir variáveis de configuração que controlam todos os aspectos de como o Git aparece e opera. Estas variáveis podem ser armazenadas em três lugares diferentes: /etc/gitconfig : válido para todos os usuários no sistema e todos os seus repositórios.
 
  - cd C:
    cd endereço de destino
@@ -50,12 +51,18 @@ Alterei um arquivo o que eu faço ?
  Fiz alterações no codigo , mas quero o codigo antes de ter sido alterado .
   Como faço ?
 
- - git checkout hashdocommit - > que seria o id de identificação antes de alterado ,
- serve como um chave pra voltar no tempo.
+    - git log -
+	-> mostra o id da hash, nome e email e seu commit !
+	  => Com o comando git log, você pode visualizar o que vem sendo feito em uma determinada branch ou avaliar as alterações de um arquivo em especial. Isso pode ser útil para você entender como alguma parte do código vem sendo evoluída, ou pode ajudar a avaliar os commits locais antes de dar git push. 
 
- Se quiser apagar tudo que foi feito no codigo
 
- - git rest --hard hashDoCommit -> vai apagar tudo.
+    - git checkout hashdocommit - > que seria o id de identificação antes de alterado ,
+      serve como um chave pra voltar no tempo.
+
+
+  Se quiser apagar tudo que foi feito no codigo!
+
+    - git rest --hard hashDoCommit -> vai apagar tudo.
 
  3º Passo
  Caso eu queira clonar um repositorio
