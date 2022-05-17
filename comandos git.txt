@@ -46,6 +46,8 @@ Caso queira salvar algum commit, faça um merge com outra branch. Caso contrári
 - rm -r *
 deleta os arquivos
 
+- git commit --
+
 git init --initial-branch=main
 git remote add origin
 git status

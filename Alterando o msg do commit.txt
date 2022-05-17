@@ -1,0 +1,18 @@
+ 
+  Alterando mensagem do commit
+
+	1° Na linha de comando, navegue até o repositório que contém o commit que você deseja corrigir.
+
+	2° Digite git commit --amend e pressione Enter.
+
+	3° edite a mensagem do commit e salve
+	-> aperte ESC e DIGITE: :q! para sair da tela e pronto !
+
+  OBSERVAÇÃO
+    Se você já tiver feito push do commit no GitHub.com, será necessário
+    forçar o push de um commit com uma mensagem corrigida.
+
+
+  -> Use o comando push --force-with-lease para fazer push forçado sobre o commit antigo.
+
+	$ git push --force-with-lease origin example-branch
