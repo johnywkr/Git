@@ -1,5 +1,8 @@
 - Comandos -
 
+- git pull origin suabranch
+  para especificar qual branch deseja puxar
+
 - git push origin main
  Navegando por diferentes commits
  No caso de um commit, você irá acessá-lo através de seu hash:
